@@ -60,7 +60,7 @@ User login can be initiated with the `oneId` method:
 
 After login is successful, a user response to returned to proceed with.
 
-you can check out the example on [this link](https://github.com/charlesarchibong/flutter_credo/tree/dev/example)
+you can check out the example on [this link](https://github.com/Joshuauzor/oneid-flutter-sdk/tree/master/example)
 
 # Contribution
 
