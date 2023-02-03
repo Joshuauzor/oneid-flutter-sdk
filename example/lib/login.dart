@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
+import 'package:oneid_flutter/oneid_flutter.dart';
 import 'package:oneid_sdk_eg/home.dart';
 
 class LoginWithOneID extends StatefulWidget {

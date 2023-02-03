@@ -3,7 +3,6 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:oneid_flutter/oneid_flutter.dart';
-import 'package:oneid_flutter/src/data/data.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class OneIdWebView extends StatefulWidget {
