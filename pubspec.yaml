@@ -1,7 +1,7 @@
 name: oneid_flutter
 description: A oneID flutter SDK.
 version: 0.0.1
-homepage: https://gitlab.com/oneid-technolgy/oneid-sdk/oneid-flutter-sdk.git
+homepage: https://github.com/Joshuauzor/oneid-flutter-sdk.git
 
 environment:
   sdk: '>=2.18.6 <3.0.0'

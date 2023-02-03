@@ -1,39 +1,87 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# oneid-flutter-sdk
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+## OneID SDK Flutter
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+This library that gives you access to OneID SSO services [OneID] into your Flutter application. Official Flutter SDK for [OneID](https://oneidtech.com).
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## Installation
 
-## Features
+- To start using this package, simply add the following to project `pubspec.yaml`
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+```yaml
+---
+dependencies:
+  oneid: <version>
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+### 1. Permissions
 
-```dart
-const like = 'sample';
+To use this package, your android app must declare internet permission. Add the following code to the application level of your AndroidManifest.xml.
+
+```xml
+	<uses-permission android:name="android.permission.INTERNET" />
 ```
 
-## Additional information
+### 2. Initializing SDK
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+    To use [OneID] SDK, you need to first initialize it by using the `OneIDPlugin` class.
+
+```dart
+
+OneIDPlugin oneIDPlugin =  OneIDPlugin(
+    apiKey:  'apiKey',
+);
+
+```
+
+Ensure to perform this instantiation in the `initState` method of your Widget.
+
+```dart
+OneIDPlugin oneIDPlugin;
+
+@override
+void  initState() {
+oneIdPlugin = const OneIDPlugin(apiKey: 'apiKey');
+
+initPayment();
+super.initState();
+}
+```
+
+### 3. Login User
+
+User login can be initiated with the `oneId` method:
+
+## Parameters
+
+- `BuildContext` current buildcontext of your app.
+
+After login is successful, a user response to returned to proceed with.
+
+you can check out the example on [this link](https://github.com/charlesarchibong/flutter_credo/tree/dev/example)
+
+# Contribution
+
+I highly encourage the community to step forward and improve this
+library further. You can fix any reported bug, propose or implement new
+features, write tests, etc.
+
+Here is a quick list of things to remember
+
+- Check the open issues before creating a new one,
+- Help me in reducing the number of open issues by fixing any existing
+  bugs,
+- Check the roadmap to see if you can help in implementing any new
+  feature,
+- You can contribute by writing unit and integration tests for this
+  library,
+- If you have any new idea that aligns with the goal of this library,
+  feel free to raise a feature request and discuss it.
+
+# Author
+
+This OneID package for Flutter is developed by [Joshua Uzor](https://github.com/Joshuauzor)
+
+Also, as always, please give us a star to help!
