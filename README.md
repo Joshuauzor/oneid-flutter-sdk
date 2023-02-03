@@ -45,7 +45,6 @@ OneIDPlugin oneIDPlugin;
 void  initState() {
 oneIdPlugin = const OneIDPlugin(apiKey: 'apiKey');
 
-initPayment();
 super.initState();
 }
 ```
@@ -57,6 +56,10 @@ User login can be initiated with the `oneId` method:
 ## Parameters
 
 - `BuildContext` current buildcontext of your app.
+
+```dart
+final res = await oneIdPlugin!.oneId(context: context);
+```
 
 After login is successful, a user response to returned to proceed with.
 

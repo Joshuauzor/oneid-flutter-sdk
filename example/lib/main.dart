@@ -45,7 +45,7 @@ class _LoginWithOneIDState extends State<LoginWithOneID> {
       child: Center(
         child: GestureDetector(
           onTap: () async {
-            var res = await oneIdPlugin!.oneId(context: context);
+            final res = await oneIdPlugin!.oneId(context: context);
             await _navigateToHome(context: context, user: res);
           },
           child: const Text('login'),
